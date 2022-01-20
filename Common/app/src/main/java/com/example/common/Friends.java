@@ -45,4 +45,14 @@ public class Friends {
     public void setCity(String city) {
         this.city = city;
     }
+
+    @Override
+    public String toString() {
+        return "Friends{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", dob=" + dob +
+                ", city='" + city + '\'' +
+                '}';
+    }
 }
