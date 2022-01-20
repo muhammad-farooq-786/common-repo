@@ -40,7 +40,10 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
 
         layoutManager = new LinearLayoutManager(this);
+        //layoutManager1 = new LinearLayoutManager(MainActivity.this,
+                LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(layoutManager);
+        //recyclerView.setLayoutManager(layoutManager1);
 
         adapter = new RecyclerViewAdapter(friendsList,MainActivity.this) {
 
