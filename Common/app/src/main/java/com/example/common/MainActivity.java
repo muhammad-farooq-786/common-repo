@@ -13,9 +13,9 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private RecyclerView recyclerView;
+    private RecyclerView recyclerView,recyclerView1;
     private RecyclerView.Adapter adapter;
-    private RecyclerView.LayoutManager layoutManager;
+    private RecyclerView.LayoutManager layoutManager,layoutManager1;
 
     List<Friends> friendsList = new ArrayList<Friends>();
 
@@ -38,12 +38,13 @@ public class MainActivity extends AppCompatActivity {
         Friends f7 = new Friends(8,"Hashim",1987,"Lahore");
         friendsList.addAll(Arrays.asList(new Friends[]{f0,f1,f2,f3,f4,f5,f6,f7,}));
         recyclerView = findViewById(R.id.recyclerView);
+        recyclerView1 = findViewById(R.id.recyclerView);
 
         layoutManager = new LinearLayoutManager(this);
-        //layoutManager1 = new LinearLayoutManager(MainActivity.this,
+        layoutManager1 = new LinearLayoutManager(MainActivity.this,
                 LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(layoutManager);
-        //recyclerView.setLayoutManager(layoutManager1);
+        recyclerView1.setLayoutManager(layoutManager1);
 
         adapter = new RecyclerViewAdapter(friendsList,MainActivity.this) {
 
