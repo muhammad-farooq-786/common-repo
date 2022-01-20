@@ -35,9 +35,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.data=friendsList.get(position);
         holder.textViewFriendName.setText(holder.data.getName());
         holder.textViewdateFriend.setText(String.valueOf(holder.data.getDob()));
-        //holder.imageViewFriend.setImageResource(R.drawable.airplane);
+
         holder.textViewCity.setText(holder.data.getCity());
-        //Glide.with(mAct).load("https://homepages.cae.wisc.edu/~ece533/images/airplane.png").into(holder.imageViewFriend);
+
     }
 
     @Override
